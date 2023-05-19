@@ -1,6 +1,5 @@
 package com.example;
 
-
 import org.junit.Test;
 import org.junit.Before;
 import org.mockito.Mock;
