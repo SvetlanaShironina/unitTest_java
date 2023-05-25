@@ -21,12 +21,14 @@ import static org.junit.Assert.assertEquals;
     public void createNewInstance() {
         cat = new Cat(feline);
     }
+
     @Test
     public void getSound() {
         String actual = cat.getSound();
         String expected = "Мяу";
         assertEquals(expected, actual);
     }
+
     @Test
     public void getFood() throws Exception  {
         Mockito

@@ -33,6 +33,7 @@ public class LionParametrizedTest {
     public void init() {
         MockitoAnnotations.initMocks(this);
     }
+
     @Test
     public void checkCreateLionSex() throws Exception {
         Lion lion = new Lion(sex, feline);
