@@ -1,9 +1,11 @@
 package com.example;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
@@ -12,21 +14,12 @@ import static org.junit.Assert.assertEquals;
 @RunWith(MockitoJUnitRunner.class)
 public class FelineTest {
 
-    private Feline feline;
-    @Mock
-    Animal animal;
+   private Feline feline;
+
     @Before
     public void createNewInstance() {
         feline = new Feline();
     }
-   /* Почему данный тест не прошел проверку в jacoco?
-   @Test
-    public void eatMeat() throws Exception {
-        Mockito
-                .when(animal.getFood("Хищник"))
-                .thenReturn(List.of("Животные", "Птицы", "Рыба"));
-        assertEquals(List.of("Животные", "Птицы", "Рыба"), feline.eatMeat());
-    }*/
     @Test
     public void eatMeatSize() throws Exception {
         List<String> list = feline.eatMeat();
@@ -45,5 +38,10 @@ public class FelineTest {
         int actual = feline.getKittens();
         int expected = 1;
         assertEquals(expected, actual);
+    }
+    @Test
+    public void getKittensCount(){
+        int actual = feline.getKittens(2);
+        assertEquals(2, actual);
     }
 }
