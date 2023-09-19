@@ -10,7 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-
+import io.qameta.allure.junit4.DisplayName;
 @RunWith(MockitoJUnitRunner.class)
     public class CatTest{
     private Cat cat;
@@ -23,6 +23,7 @@ import static org.junit.Assert.assertEquals;
     }
 
     @Test
+    @DisplayName("Проверка на звук кошки")
     public void getSound() {
         String actual = cat.getSound();
         String expected = "Мяу";
